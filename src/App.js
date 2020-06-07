@@ -32,30 +32,61 @@ function App() {
 
   return (
     <div className="App">
+
       <Header />
+
       {filters.length > 0 && <Filters 
         filters={filters}
         clearAll={clearAll}
         clearFilter={clearFilter}
       />}
+
+
+        {/* map jobs data, if filter array > 0, return jobs where jobTags contain filters */}
       <div className="container">
       {jobData.map((jobs) => {
-        return       <JobCards
-        key={jobs.id}
-        logo={jobs.logo}
-        company={jobs.company}
-        position={jobs.position}
-        postedAt={jobs.postedAt}
-        contract={jobs.contract}
-        location={jobs.location}
-        isFeatured={jobs.featured}
-        isNew={jobs.new}
-        role={jobs.role}
-        level={jobs.level}
-        languages={jobs.languages}
-        tools={jobs.tools}
-        handleFilters={handleFilters}
-       />
+
+        let jobTags = [jobs.role, jobs.level, ...(jobs.languages) || [], ...(jobs.tools) || []]
+
+        let filterJobs = (jobTags, filters) => 
+          filters.every((value) => jobTags.includes(value));
+
+       
+        return filters.length === 0 ? (    
+
+          <JobCards
+            key={jobs.id}
+            logo={jobs.logo}
+            company={jobs.company}
+            position={jobs.position}
+            postedAt={jobs.postedAt}
+            contract={jobs.contract}
+            location={jobs.location}
+            isFeatured={jobs.featured}
+            isNew={jobs.new}
+            handleFilters={handleFilters}
+            jobTags={jobTags}
+          /> ) 
+
+          : 
+
+          ( filterJobs(jobTags, filters) && (
+
+          <JobCards
+            key={jobs.id}
+            logo={jobs.logo}
+            company={jobs.company}
+            position={jobs.position}
+            postedAt={jobs.postedAt}
+            contract={jobs.contract}
+            location={jobs.location}
+            isFeatured={jobs.featured}
+            isNew={jobs.new}
+            handleFilters={handleFilters}
+            jobTags={jobTags}
+          /> )
+
+       );
       })}
       </div>
 

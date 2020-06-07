@@ -9,14 +9,10 @@ const JobCards = ({
     location,
     isFeatured,
     isNew,
-    role,
-    level,
-    languages,
-    tools,
-    handleFilters
+    handleFilters,
+    jobTags
 }) => {
 
-    const jobTags = [role, level, ...(languages) || [], ...(tools) || []]
 
     return (
         <div className="job-card">
