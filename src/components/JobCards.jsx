@@ -12,12 +12,11 @@ const JobCards = ({
     role,
     level,
     languages,
-    tools
+    tools,
+    handleFilters
 }) => {
 
     const jobTags = [role, level, ...(languages) || [], ...(tools) || []]
-
-    console.log(jobTags)
 
     return (
         <div className="job-card">
@@ -39,7 +38,7 @@ const JobCards = ({
 
             <div className="card-tags">
                 {jobTags.map((tag, index) => {
-                    return <button className="job-tag" key={index} tagname={tag}> {tag} </button>
+                    return <button onClick={() => handleFilters(tag)} className="job-tag" key={index} tagname={tag}> {tag} </button>
                 })}
             </div>
 
