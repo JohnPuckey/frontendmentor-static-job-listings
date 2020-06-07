@@ -21,6 +21,11 @@ body {
   background-color: var(--bg-light-cyan);
 }
 
+button {
+  font-family: "Spartan", sans-serif;
+}
+
+
 /* Header Component */
 
 .header {
@@ -32,4 +37,116 @@ body {
 
 @media only screen and (min-width: 600px) {
   .header {background-image: url('./assets/bg-header-desktop.svg');}
+}
+
+/* Job Cards */
+
+.job-card {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  margin:40px auto 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.job-card:nth-of-type(2) {
+  margin-top: 100px;
+}
+
+.logo {
+  position: absolute;
+  width: 50px;
+  top: -25px;
+  left: 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.card-details {
+  padding: 35px 25px 20px;
+}
+
+.company {
+  color: var(--primary-dark-cyan);
+  font-size: 1em;
+  display: inline;
+  margin-right: 15px;
+}
+
+.new-tag, .feature-tag {
+  display: inline;
+  font-size: .7em;
+  text-transform: uppercase;
+  padding: 7px 8px 4px;
+  border-radius: 15px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.new-tag {
+  background-color: var(--primary-dark-cyan);
+}
+
+.feature-tag {
+  background-color: var(--vdark-gray-cyan);
+}
+
+.feature-highlight {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: var(--primary-dark-cyan);
+  left: 0;
+  top: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.position {
+  cursor: pointer;
+  padding-top: 15px;
+  font-size: 1.2em;
+  color: var(--vdark-gray-cyan);
+}
+
+.position:hover {
+  color: var(--primary-dark-cyan);
+}
+
+.description {
+  padding-top: 15px;
+  font-size: .8em;
+  color: var(--dark-gray-cyan);
+}
+
+.description span {
+  padding: 0 3px;
+  font-size: 1em;
+}
+ 
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 25px;
+  padding: 15px 0 10px;
+  border-top: 1px solid var(--dark-gray-cyan);
+}
+
+.job-tag {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 8px 6px;
+  margin: 0 15px 15px 0px;
+  color: var(--primary-dark-cyan);
+  background-color: var(--filter-tablets);
+  font-size: .85em;
+  font-weight: 700;
+}
+
+.job-tag:hover {
+  color: var(--filter-tablets);
+  background-color: var(--primary-dark-cyan);
 }
