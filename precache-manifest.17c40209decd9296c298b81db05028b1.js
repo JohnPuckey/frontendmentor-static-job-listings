@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f41a2ebbc4a0d67f57a20c71923cf8e",
+    "revision": "fb90e1d920ebdaa42284ab4af8f12cb3",
     "url": "/frontendmentor-static-job-listings/index.html"
   },
   {
-    "revision": "8aeffabfc09b88bddd3a",
+    "revision": "f0bb31f0127795c8e64c",
     "url": "/frontendmentor-static-job-listings/static/css/main.f90796c9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontendmentor-static-job-listings/static/js/2.b9b9428a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8aeffabfc09b88bddd3a",
-    "url": "/frontendmentor-static-job-listings/static/js/main.3721acbb.chunk.js"
+    "revision": "f0bb31f0127795c8e64c",
+    "url": "/frontendmentor-static-job-listings/static/js/main.74a03b12.chunk.js"
   },
   {
     "revision": "85b82081ab9d4599947e",
