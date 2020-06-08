@@ -34,7 +34,7 @@ const JobCards = ({
 
             <div className="card-tags">
                 {jobTags.map((tag, index) => {
-                    return <button onClick={() => handleFilters(tag)} className="job-tag" key={index} tagname={tag}> {tag} </button>
+                    return <button onClick={() => handleFilters(tag)} className="job-tag" key={index}> {tag} </button>
                 })}
             </div>
 
