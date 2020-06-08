@@ -35,6 +35,7 @@ function App() {
 
       <Header />
 
+      {/* if filters array > 0, show filters component */}
       {filters.length > 0 && <Filters 
         filters={filters}
         clearAll={clearAll}
@@ -42,7 +43,7 @@ function App() {
       />}
 
 
-        {/* map jobs data, if filter array > 0, return jobs where jobTags contain filters */}
+        {/* map jobsData, if filter array > 0, return jobCards where jobTags contain filters */}
       <div className="container">
       {jobData.map((jobs) => {
 
