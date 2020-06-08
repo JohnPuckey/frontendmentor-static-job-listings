@@ -1,5 +1,5 @@
 
-#A deployed version of the finished challenge can be found [Here] {https://johnpuckey.github.io/frontendmentor-static-job-listings/}
+# A deployed version of the finished challenge can be found [Here](https://johnpuckey.github.io/frontendmentor-static-job-listings/)
 
 # Frontend Mentor - Job Listings Challenge
 
